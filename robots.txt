@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://altar037-hmtl.github.io/revision-police-municipale/sitemap.xml
