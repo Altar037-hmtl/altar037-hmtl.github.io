@@ -1875,6 +1875,7 @@ function ensureData(cb){
 function setupData(){
  DATA_OK=true;PM=PMD.c;
  PM.forEach(function(c){BYCODE[c[0]]=c;c.k=nrm(c[1])});
+ document.getElementById('nCom').textContent=PM.length.toLocaleString('fr-FR');
  countCommunes();
 }
 var LF='https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI';
@@ -2335,7 +2336,6 @@ document.addEventListener('click',function(e){
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!mPanel.hidden){setMenu(false);mBtn.focus()}});
 document.getElementById('nQ').textContent=Q.length;
 document.getElementById('nLib').textContent=LIB.length;
-document.getElementById('nCom').textContent=PM.length.toLocaleString('fr-FR');
 
 /* ==== V13 : navigation par espaces, cartes mentales, guide, données ==== */
 var GROUPS={
