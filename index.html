@@ -1525,6 +1525,7 @@ input,textarea,[contenteditable],.mmbody,.mmbody img{-webkit-user-select:text;us
 <h3>Site non officiel</h3>
 <div class="box key">Ce site est un <b>outil personnel de révision</b>, gratuit et sans publicité. Il n’est <b>ni édité ni validé</b> par le Ministère de l’Intérieur, le CNFPT, un centre de gestion ou une commune. Les couleurs bleu, blanc, rouge sont décoratives ; aucun logo ni emblème officiel n’est utilisé.</div>
 <p>Le contenu est un résumé pédagogique. Il peut contenir des erreurs ou ne plus être à jour, et <b>ne constitue pas un conseil juridique</b>. Seuls les textes publiés au Journal officiel et consultables sur <a href="https://www.legifrance.gouv.fr" target="_blank" rel="noopener">Légifrance</a> font foi.</p>
+<p>Ce site <b>n’est pas un organisme de formation</b>, ne délivre <b>aucune certification</b> et ne garantit ni la réussite à un concours ni l’obtention d’un emploi. Les questions du quiz et de l’examen blanc sont des exercices d’entraînement, pas les épreuves réelles.</p>
 
 <h3>Éditeur</h3>
 <p>Site édité par un particulier, à titre non professionnel et non commercial. Comme le permet la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique (LCEN), l’éditeur ne publie pas son identité ; elle est connue de l’hébergeur.</p>
@@ -2473,7 +2474,6 @@ function openTour(){
 function closeTour(){store('tuto',1);tourDlg.close()}
 document.getElementById('helpBtn').onclick=openTour;
 document.getElementById('tourAgain').onclick=openTour;
-setTimeout(function(){if(!store('tuto')&&location.hash.length<2)openTour()},400);
 
 /* ---------- Effacer mes données ---------- */
 document.getElementById('wipeData').onclick=function(){
