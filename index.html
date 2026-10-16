@@ -2534,12 +2534,13 @@ try{var h=location.hash.slice(1);if(/^[dc]-/.test(h))ensureData(function(){if(/^
 
 <style id="pm-scrolltools">
 #pmRead{position:fixed;top:0;left:0;height:3px;width:0;background:#0b4fa0;z-index:60;transition:width .1s linear}
-#pmTop{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:60;width:52px;height:52px;border-radius:50%;border:3px solid #fff;background:#0b4fa0;color:#fff;font:700 26px/1 system-ui,sans-serif;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:opacity .2s}
-#pmTop:hover,#pmTop:focus-visible{background:#ef4135;outline:3px solid #0b4fa0;outline-offset:2px}
+#pmTop{position:fixed;right:16px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:60;font:inherit;font-weight:700;padding:10px 16px;border-radius:999px;border:2px solid #fff;background:#0b4fa0;color:#fff;cursor:pointer;box-shadow:0 0 0 3px #fff,0 4px 12px rgba(0,0,0,.3);opacity:0;pointer-events:none;transition:opacity .2s,background .2s,color .2s}
+#pmTop:hover,#pmTop:focus-visible{background:#ef4135;color:#fff;border-color:#0b4fa0;outline:none}
 #pmTop.on{opacity:1;pointer-events:auto}
+@media print{#pmRead,#pmTop{display:none!important}}
 </style>
 <div id="pmRead" aria-hidden="true"></div>
-<button type="button" id="pmTop" aria-label="Revenir en haut de la page" title="Haut de page">⬆</button>
+<button type="button" id="pmTop" aria-label="Revenir en haut de la page">↑ Haut de page</button>
 <script id="pm-scrolltools-js">
 (function(){
   var bar=document.getElementById('pmRead'), btn=document.getElementById('pmTop');
